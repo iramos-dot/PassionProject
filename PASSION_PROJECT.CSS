@@ -1,16 +1,19 @@
 .header {
 
-    background-color: red;
+    background-image: url(img/header_img.png);
     width: 100%;
-    height: 100px;
-}
+    height: 250px;
+
+    
+    }
 
 
 h1 {
-    color: whitesmoke;
+    color: red;
     font-weight: bold;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
+    
 }
 
 h2 {
@@ -20,15 +23,17 @@ h2 {
     text-align: center;
 
 }
-
+.songs{
+    color: floralwhite;
+}
+.ordered{
+    color: floralwhite;
+}
+.intro{
+    color: floralwhite;
+}
 p {
+    color: floralwhite;
     text-align: center;
 }
 
-.songs {
-    text-align: right;
-}
-
-.ordered {
-    text-align: right;
-}
