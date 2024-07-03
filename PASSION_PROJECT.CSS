@@ -2,17 +2,19 @@
 
     background-image: url(img/hop_background_passion.png);
     width: 100%;
-    height: 250px;
+    height: 100vh;
 
     
     }
 
 
 h1 {
-    color: red;
+    color: gold;
     font-weight: bold;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     text-align: center;
+    text-shadow: 2px 2px red;
+    position:relative; top:300px; left:20px; margin-left:20px; margin-right:20px;
     
 }
 
@@ -25,12 +27,17 @@ h2 {
 }
 .songs{
     color: rgb(11, 8, 1);
+    background-image: url("img/Screenshot\ 2024-06-25\ 125911.png");
+    position:center;height: 50vh;width: 200vw;
+    
 }
 .ordered{
     color: rgb(11, 8, 2);
 }
 .intro{
     color: rgb(7, 5, 0);
+    background-image: url("img/Lyrical_Nobody_cover.png");
+    position: relative;height: 50vh;width: 200vw;
 }
 p {
     color: rgb(3, 2, 1);
