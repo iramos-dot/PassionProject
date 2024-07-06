@@ -27,8 +27,6 @@ h2 {
 }
 .songs{
     color: rgb(11, 8, 1);
-    background-image: url("img/Screenshot\ 2024-06-25\ 125911.png");
-    position:center;height: 50vh;width: 200vw;
     
 }
 .ordered{
@@ -36,11 +34,13 @@ h2 {
 }
 .intro{
     color: rgb(7, 5, 0);
-    background-image: url("img/Lyrical_Nobody_cover.png");
-    position: relative;height: 50vh;width: 200vw;
+    
 }
 p {
     color: rgb(3, 2, 1);
     text-align: center;
 }
+
+ 
+
 
