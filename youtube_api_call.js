@@ -1,23 +1,22 @@
-const axios = require('axios');
+const loadVideo = (iframe) => {
+    const cid = "UCwQxySaAljAo7PrqTLTrylg";
+    const channelURL = encodeURIComponent(`https://www.youtube.com/feeds/videos.xml?channel_id=${cid}`)
+    const reqURL = `https://api.rss2json.com/v1/api.json?rss_url=${channelURL}`;
 
-// Example API endpoint
-const apiUrl = 'https://api.example.com/data';
-const apiKey = 'YOUR_API_KEY'; // Replace with your API key
-
-// Function to make API call
-async function fetchData() {
-    try {
-        const response = await axios.get(apiUrl, {
-            headers: {
-                'Authorization': `Bearer ${apiKey}`,
-                'Content-Type': 'application/json'
-            }
-        });
-        console.log(response.data);
-    } catch (error) {
-        console.error('Error fetching data:', error.message);
-    }
+    fetch(reqURL)
+        .then(response => response.json())
+        .then(result => {
+          console.log(result)
+            const videoNumber = iframe.getAttribute('vnum')
+            const link = result.items[videoNumber].link;
+            const id = link.substr(link.indexOf("=") + 1);
+            iframe.setAttribute("src", `https://youtube.com/embed/${id}?controls=0&autoplay=1`);
+        })
+        .catch(error => console.log('error', error));
 }
 
-// Call the function to fetch data
-fetchData();
+const iframes = document.getElementsByClassName('latestVideoEmbed');
+for (let i = 0, len = iframes.length; i < len; i++) {
+    loadVideo(iframes[i]);
+}
+console.log(1);
